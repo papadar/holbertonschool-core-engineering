@@ -1,2 +1,8 @@
 #!/usr/bin/env python3
-print(", ".join("{}{}".format(i,j) for i in range(9) for j in range(i + 1, 10)))
+print(
+    ", ".join(
+        "{}{}".format(i, j)
+        for i in range(9)
+        for j in range(i + 1, 10)
+    )
+)
