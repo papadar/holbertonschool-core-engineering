@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The Import documentation text"""
-Rectangle = __import__('2-rectangle').Rectangle    
+Rectangle = __import__('2-rectangle').Rectangle
 
 
 class Square(Rectangle):
