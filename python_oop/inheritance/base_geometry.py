@@ -2,7 +2,7 @@
 '''The documentation text'''
 
 
-class Square:
+class BaseGeometry:
     '''The class documentation text'''
     pass
 
