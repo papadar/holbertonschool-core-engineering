@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-'''The documentation text'''
+"""The documentation text"""
 
 
 class BaseGeometry:
-    '''The class documentation text'''
-    pass
+    """The class documentation text"""
 
     def area(self):
-        raise NotImplementedError("area() is not implemented")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         if not isinstance(value, int):
