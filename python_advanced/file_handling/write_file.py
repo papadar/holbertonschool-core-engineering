@@ -2,7 +2,7 @@
 """simple file write func"""
 
 
-def write_file(filename="", text=""):
+def write_file(filename="", text="") -> int:
     """the function writes text to a file"""
-    with open(filename, 'w') as f:
-        f.write(text)
+    with open(filename, 'w', encoding="utf-8") as f:
+        return f.write(text)
