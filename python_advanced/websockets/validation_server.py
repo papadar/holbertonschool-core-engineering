@@ -4,14 +4,18 @@
 
 import asyncio
 from websockets.asyncio.server import serve
+from websockets.exceptions import ConnectionClosed
 
 
 async def echo(websocket):
-    async for message in websocket:
-        if len(message.strip()) == 0:
-            await websocket.send("ERR:EMPTY")
-        else:
-            await websocket.send(f"OK:{message}")
+    try:
+        async for message in websocket:
+            if len(message.strip()) == 0:
+                await websocket.send("ERR:EMPTY")
+            else:
+                await websocket.send(f"OK:{message}")
+    except ConnectionClosed:
+        print("connection closed")
 
 
 async def main():
